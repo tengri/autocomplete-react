@@ -10,12 +10,10 @@ export default class Autocomplete extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('componentWillReceiveProps nextProps: ', nextProps);
         this.props.fetch(nextProps.valueLink.value).then((data)=>this.setState({items:data}));
     }
 
     render() {
-        console.log('Autocomplete render this.props: ', this.props);
         return (
             <div className="autocomplete">
                 <div className="autocomplete__title">
